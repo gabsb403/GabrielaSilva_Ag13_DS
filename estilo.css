@@ -1,0 +1,85 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Centraliza o conteúdo e limita a largura da página */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título principal (a cor de fundo vem do CSS interno no HTML) */
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* ===== Layout Flexbox ===== */
+/* Container das seções: três colunas lado a lado */
+.secoes {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* permite que as colunas quebrem de linha em telas pequenas */
+    gap: 20px; /* espaço entre as colunas */
+}
+
+/* Estilo comum às três seções (classe) */
+.secao {
+    flex: 1 1 250px; /* cresce e encolhe igualmente, com largura mínima de 250px */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Padroniza os títulos de todas as seções */
+.secao h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Imagens com a mesma altura, sem deformar */
+.secao img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* corta a imagem sem esticar */
+}
+
+/* Textos das seções */
+.secao p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Links ocupam a própria linha */
+.secao a {
+    display: block;
+    margin: 10px 0;
+}
+
+/* ===== Estilo individual de cada seção (IDs) ===== */
+#filmes {
+    background-color: #fde2e2;
+}
+#filmes h2 {
+    color: #b30000;
+}
+
+#musica {
+    background-color: #e2f0fd;
+}
+#musica h2 {
+    color: #004a99;
+}
+
+#games {
+    background-color: #e2fde8;
+}
+#games h2 {
+    color: #006b24;
+}
